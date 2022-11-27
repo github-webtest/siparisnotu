@@ -1,0 +1,75 @@
+﻿<html>
+<head>
+    <title>Nova Organizasyon - Sipariş Notu</title>
+	<meta name="author" content="Fırat Işık">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+	<link url="style" rel="stylesheet" href="css/style.css" type="text/css" media="screen">
+	<script src="js/script.js"></script>
+
+<style>
+@font-face{
+  font-family: Avenir;
+  src: url(fonts/AvenirLTW05-35Light.woff2);
+}
+</style>
+	
+</head>
+
+<body>
+
+
+<div class="head">
+
+<div class="head_img" style="background-image: url('images/settings.png')" onclick="menu_run()"></div>
+
+<div class="head_text"><b>Sipariş Ekle</b></div>
+
+</div>
+
+
+
+<div id="menu_id" class="menu">
+
+<div class="menu_t" onclick="go_anasayfa()">Anasayfa</div>
+<div class="menu_t" onclick="go_gecmis()">Geçmiş Siparişler</div>
+<div class="menu_t" onclick="go_cop()">Çöp Kutusu</div>
+<div class="menu_t" onclick="go_sezon()">Sezonlar</div>
+<div class="menu_t" onclick="go_hakkinda()">Hakkında</div>
+
+</div>
+
+
+
+
+
+<div id="tasks_div" class="tasks">
+<div class="task_title"></div>
+
+
+
+
+<div class="siparis_miktar bg_gray"><input id="sandalye_input" class="siparis_left_input" type="Number" placeholder="Sandalye"></input></div>
+<div class="siparis_adres bg_gray"><textarea id="adres_input" class="siparis_right_input" typte="Text" placeholder="Adres"></textarea></div>
+<div class="siparis_miktar bg_white"><input id="masa_input" class="siparis_left_input" type="Number" placeholder="Masa"></input></div>
+<div class="siparis_aciklama bg_white"><textarea id="aciklama_input" class="siparis_right_input" typte="Text" placeholder="Açıklama"></textarea></div>
+<div class="siparis_miktar bg_gray" style="margin-top: -40px;"><input id="cadir_input" class="siparis_left_input" type="Number" placeholder="Çadır"></input></div>
+<div class="siparis_miktar bg_white" style="margin-top: -20px;"><input id="cayocagi_input" class="siparis_left_input" type="Number" placeholder="Çay Ocağı"></input></div>
+<div class="siparis_miktar bg_gray"><input id="projektor_input" class="siparis_left_input" type="Number" placeholder="Projektör"></input></div>
+<div class="siparis_miktar bg_white"><input id="telefon_input" class="siparis_left_input" type="Number" placeholder="Telefon"></input></div>
+<div class="siparis_miktar bg_gray"><input id="isim_input" class="siparis_left_input" type="Text" placeholder="İsim"></input></div>
+<div class="siparis_miktar bg_white"><input id="tarih_input" class="siparis_left_input" type="Text" placeholder="Tarih"></input></div>
+<div class="siparis_tutar bg_gray"><input id="fiyat_input" class="siparis_tutar_input" type="Number" placeholder="Fiyat"></input></div>
+<div class="siparis_olustur" onclick="add_siparis()"><b>Sipariş Ekle</b></div>
+<div class="anasayfa" onclick="go_anasayfa()"><b>Anasayfaya Dön</b></div>
+
+
+
+</div>
+
+
+
+
+
+</body>
+</html>
