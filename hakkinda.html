@@ -1,0 +1,84 @@
+﻿<html>
+<head>
+
+    <title>Nova Organizasyon - Sipariş Notu</title>
+
+	<meta name="author" content="Fırat Işık">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+	<link url="style" rel="stylesheet" href="css/style.css" type="text/css" media="screen">
+	<script src="js/script.js"></script>
+
+<style>
+@font-face{
+  font-family: Avenir;
+  src: url(fonts/AvenirLTW05-35Light.woff2);
+}
+</style>
+	
+</head>
+
+<body>
+
+
+<div class="head">
+
+<div class="head_img" style="background-image: url('images/settings.png')" onclick="menu_run()"></div>
+
+<div class="head_text"><b>Hakkında</b></div>
+
+</div>
+
+
+
+<div id="menu_id" class="menu">
+
+<div class="menu_t" onclick="go_anasayfa()">Anasayfa</div>
+<div class="menu_t" onclick="go_gecmis()">Geçmiş Siparişler</div>
+<div class="menu_t" onclick="go_cop()">Çöp Kutusu</div>
+<div class="menu_t" onclick="go_sezon()">Sezonlar</div>
+<div class="menu_t" onclick="go_hakkinda()">Hakkında</div>
+
+</div>
+
+<div class="board">
+<center>
+<div class="h_img" style="background-image: url('images/logo.png');"></div>
+<br>
+<b style="user-select: none;">Nova Organizasyon - Sipariş Notu<br>Version: 1.0</b>
+<div class="button_h" onclick="close_sezon_open()"><b>Sezonu Bitir</b></div>
+<div class="button_h" onclick="clear_data_open()" style="background-color: red"><b>Verileri Sil</b></div>
+</div>
+</center>
+</div>
+
+<div id="yes_no_bg" class="yesno_bg">
+<div class="yes_no">
+<b>Sezonu Bitir</b>
+<br>
+<br>
+<b>Lütfen Sezon Yılını Girin</b>
+<br>
+<input id="yes_no_input_sezon" class="yesno_input" type="number"></input>
+<br>
+<div class="yesno_div" onclick="close_sezon_close()"><b>İPTAL</b></div><div class="yesno_div" onclick="close_sezon()" style="float: right;"><b>ONAYLA</b></div>
+</div>
+</div>
+
+<div id="yes_no_bg2" class="yesno_bg">
+<div class="yes_no">
+<b>Lütfen Şifreyi Girin</b>
+<br>
+<input id="yes_no_input_password" class="yesno_input" type="text"></input>
+<br>
+<center>
+<div class="yesno_div" onclick="clear_data_close()"><b>İPTAL</b></div><div class="yesno_div" onclick="clear_data()" style="float: right;"><b>SİL</b></div>
+</center>
+</div>
+</div>
+
+<div id="loading" style="width:100%; height: 100vh; text-align: center; justify-content:center; display:flex; position: fixed; top: 0px; left: 0px; background-color:rgba(0,0,0,0.5); z-index:9999;">
+<div class="lds-default"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
+</div>
+</body>
+</html>
