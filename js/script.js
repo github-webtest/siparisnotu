@@ -364,31 +364,6 @@ function export_data() {
         URL.revokeObjectURL(url);
     }
 
-    function import_data() {
-        const file = this.files[0];
-        if (!file) return;
-        
-        const reader = new FileReader();
-        reader.onload = function(e) {
-            try {
-                eval(e.target.result);
-                
-                if (typeof localBackup === "object") {
-                    localStorage.clear();
-                    for (const [key, value] of Object.entries(localBackup)) {
-                        localStorage.setItem(key, value);
-                    }
-                    alert("LocalStorage başarıyla geri yüklendi!");
-                } else {
-                    alert("Geçersiz backup.js dosyası!");
-                }
-            } catch (err) {
-                alert("Dosya okunamadı: " + err.message);
-            }
-        };
-        reader.readAsText(file);
-    }
-
 function save() {
 	
 	document.getElementById("add_1").style.display = d_none;
