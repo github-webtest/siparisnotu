@@ -387,6 +387,44 @@ function save() {
 	}, 1);	
 }
 
+function export_data() {
+        const data = JSON.stringify(localStorage, null, 2);
+        const jsFile = `var localBackup = ${data};`;
+        
+        const blob = new Blob([jsFile], { type: "application/javascript" });
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement("a");
+        a.href = url;
+        a.download = "backup.js";
+        a.click();
+        URL.revokeObjectURL(url);
+    }
+
+    document.getElementById("import").addEventListener("change", function() {
+        const file = this.files[0];
+        if (!file) return;
+        
+        const reader = new FileReader();
+        reader.onload = function(e) {
+            try {
+                eval(e.target.result);
+                
+                if (typeof localBackup === "object") {
+                    localStorage.clear();
+                    for (const [key, value] of Object.entries(localBackup)) {
+                        localStorage.setItem(key, value);
+                    }
+                    alert("LocalStorage başarıyla geri yüklendi!");
+                } else {
+                    alert("Geçersiz backup.js dosyası!");
+                }
+            } catch (err) {
+                alert("Dosya okunamadı: " + err.message);
+            }
+        };
+        reader.readAsText(file);
+    });
+
 const myTimeout = setTimeout(timeout, 500);
 
 function timeout() {
