@@ -1,5 +1,4 @@
-﻿<html>
-<head>
+<html><head>
 
     <title>Nova Organizasyon - Sipariş Notu</title>
 
@@ -47,10 +46,11 @@
 <br>
 <b style="user-select: none;">Nova Organizasyon - Sipariş Notu<br>Version: 1.0</b>
 <div class="button_h" onclick="close_sezon_open()"><b>Sezonu Bitir</b></div>
-<div class="button_h" onclick="clear_data_open()" style="background-color: red"><b>Verileri Sil</b></div>
-</div>
-</center>
-</div>
+<div class="button_h" onclick="clear_data_open()" style="background-color: red"><b>Verileri Sil</b></div><div class="button_h" onclick="export_data()" style="background-color: green"><b>Veriyi Yedekle</b></div>
+<input type="file" id="import" accept=".js" style="margin-top: 2vh;">
+</center></div>
+
+
 
 <div id="yes_no_bg" class="yesno_bg">
 <div class="yes_no">
@@ -59,7 +59,7 @@
 <br>
 <b>Lütfen Sezon Yılını Girin</b>
 <br>
-<input id="yes_no_input_sezon" class="yesno_input" type="number"></input>
+<input id="yes_no_input_sezon" class="yesno_input" type="number">
 <br>
 <div class="yesno_div" onclick="close_sezon_close()"><b>İPTAL</b></div><div class="yesno_div" onclick="close_sezon()" style="float: right;"><b>ONAYLA</b></div>
 </div>
@@ -69,7 +69,7 @@
 <div class="yes_no">
 <b>Lütfen Şifreyi Girin</b>
 <br>
-<input id="yes_no_input_password" class="yesno_input" type="text"></input>
+<input id="yes_no_input_password" class="yesno_input" type="text">
 <br>
 <center>
 <div class="yesno_div" onclick="clear_data_close()"><b>İPTAL</b></div><div class="yesno_div" onclick="clear_data()" style="float: right;"><b>SİL</b></div>
@@ -77,8 +77,8 @@
 </div>
 </div>
 
-<div id="loading" style="width:100%; height: 100vh; text-align: center; justify-content:center; display:flex; position: fixed; top: 0px; left: 0px; background-color:rgba(0,0,0,0.5); z-index:9999;">
+<div id="loading" style="width: 100%; height: 100vh; text-align: center; justify-content: center; display: none; position: fixed; top: 0px; left: 0px; background-color: rgba(0, 0, 0, 0.5); z-index: 9999;">
 <div class="lds-default"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
 </div>
-</body>
-</html>
+
+</body></html>
