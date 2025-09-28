@@ -267,7 +267,7 @@ function cop_kutusu() {
 	document.getElementById("siparis_edit_id" + run_number + "").style.display= "none";
 	document.getElementById("siparis_onay_id" + run_number + "").style.display= "none";
 	
-	}, 1);
+	}, 10);
 }
 
 function gecmis_siparisler() {
@@ -298,7 +298,7 @@ function gecmis_siparisler() {
 	document.getElementById("siparis_edit_id" + run_number + "").style.display= "none";
 	document.getElementById("siparis_onay_id" + run_number + "").style.display= "none";
 	
-	}, 1);
+	}, 10);
 }
 
 function sezonlar() {
@@ -348,7 +348,7 @@ function sezon() {
 	document.getElementById("siparis_edit_id" + run_number + "").style.display= "none";
 	document.getElementById("siparis_onay_id" + run_number + "").style.display= "none";
 	
-	}, 1);
+	}, 10);
 }
 
 function export_data() {
@@ -380,7 +380,6 @@ function save() {
 	document.getElementById("siparisler").innerHTML +=  localStorage.getItem("new2_siparis" + run_number + "");
 	}
 
-	if (localStorage.getItem("siparis_durum_id" + run_number + "") != null) {
 	document.getElementById("siparis_durum_id" + run_number + "").style.border= localStorage.getItem("onay_border_id" + run_number + "");
 	document.getElementById("fiyat_miktar_id" + run_number + "").style.color= localStorage.getItem("onay_color_id" + run_number + "");
 	
@@ -398,8 +397,7 @@ function save() {
 	
 	document.getElementById("tasktitle_id" + run_number + "").style.display= localStorage.getItem("s_display" + run_number + "");
 	document.getElementById("siparis_durum_id" + run_number + "").style.display= localStorage.getItem("s_display" + run_number + "");
-	}
-	}, 1);	
+	}, 10);	
 }
 
 const myTimeout = setTimeout(timeout, 500);
