@@ -359,7 +359,7 @@ function export_data() {
         const url = URL.createObjectURL(blob);
         const a = document.createElement("a");
         a.href = url;
-        a.download = "backup.js";
+        a.download = "novaDATA.js";
         a.click();
         URL.revokeObjectURL(url);
     }
