@@ -163,7 +163,7 @@ var onay_color_id1 = localStorage.getItem("onay_color_id1");
 
 var new_cop_siparis_1 = localStorage.getItem("new_cop_siparis");
 var new_gecmis_siparis_1 = localStorage.getItem("new_gecmis_siparis");
-var new_id = localStorage.getItem("id_number"); new_id++
+var new_id = localStorage.getItem("id_number");
 var sezon_gelir = localStorage.getItem("sezon_toplam_gelir"); sezon_gelir++
 var sezon_gider = localStorage.getItem("sezon_toplam_gider"); sezon_gider++
 var sezon_is = localStorage.getItem("sezon_toplam_is"); sezon_is++
@@ -181,7 +181,7 @@ function add_siparis() {
 	var adres_value = document.getElementById("adres_input").value;
 	var fiyat_value = document.getElementById("fiyat_input").value;
 	
-	new_id += 0;
+	new_id++;
 	localStorage.setItem("id_number", new_id);
 	
 	localStorage.setItem("sandalye" + new_id + "", sandalye_value);
@@ -310,7 +310,9 @@ function sezonlar() {
 	
 	setInterval(function option_div() {
 	
+	if (localStorage.getItem("sezon_yillar" + run_number + "") != null) {
 	document.getElementById("sezon_years_id" + run_number + "").innerText = localStorage.getItem("sezon_yillar" + run_number + "");
+	}
 	
 	run_number--;
 	
