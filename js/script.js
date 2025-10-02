@@ -35,7 +35,8 @@ function close_sezon() {
 	
 	var fff = "'";
 	
-	var sezon_yili = document.getElementById("yes_no_input_sezon").value;
+	var sezon_yili_raw = document.getElementById("yes_no_input_sezon").value;
+	var sezon_yili = `'${sezon_yili_raw}'`;
 	localStorage.setItem("sezon_yillar" + new_id2 + "", sezon_yili);
 	
 	localStorage.setItem("sezon_toplam_gelir_" + new_id2 + "", localStorage.getItem("sezon_toplam_gelir"));
